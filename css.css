@@ -1,0 +1,62 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+button p{
+	display: inline-block;
+	margin: 20px;
+}
+img{
+	display: block;
+}
+h1{
+	display: block;
+	width: 1000px;
+	text-align: center;
+}
+h2{
+	display: block;
+	width: 200px;
+	text-align: center;
+}
+.cell{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+}
+.r1{
+	top: 50px;
+}
+.r2{
+	top: 260px;
+}
+.r3{
+	top: 470px;
+}
+.r4{
+	top: 680px;
+}
+.r5{
+	top: 890px;
+}
+.c1{
+	left: 20px;
+}
+.c2{
+	left: 230px;
+}
+.c3{
+	left: 440px;
+}
+.c4{
+	left: 650px;
+}
+.red{
+	color: red;
+}
+#wrapper{
+	position: relative;
+	width: 1000px;
+	margin: 0px auto;
+}

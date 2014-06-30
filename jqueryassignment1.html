@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Assignment 1 - Basics</title>
+		<meta name="description" content="jQuery Assignment - 06/29/14 - Basic">
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				alert('You are using jQuery');
+				$('#show_text, img, #fad_in, #foc_but').hide();
+				$('#sliu_img').show();
+				$("#add_but").click(function(){
+					$("#addition").addClass("red");
+				});
+				$("#sli_but").click(function(){
+					$('#slide img').slideToggle();
+				});
+				$('#app_but').click(function(){
+					$('#appender').append('<p>This paragraph was appended!</p>');
+				});
+				$('#aft_but').click(function(){
+					$('.ins_aft').after("<p>This is the inserted text.</p>")
+				});
+				$('#bef_but').click(function(){
+					$('.ins_bef').before("<p>This is the inserted text.</p>")
+				});
+				$('#html_but').click(function(){
+					$('#html_rep').html("<h3>The &lt;p&gt; text was replaced with this.</h3>")
+				});
+				$('#text_get').click(function(){
+					$('#text_got').after($('#text_got').text());
+				});
+				$('#text_sel').click(function(){
+					$('#text_selection').text('This text replaced the previous text.');
+				});
+				$('#val_test').keyup(function(){
+					$('#val_ins').text($('#val_test').val());
+				});
+				$('#tog_but').click(function(){
+					$('#tog_img').toggle();
+				});
+				$('#hide_but').click(function(){
+					$('#hide_text').hide();
+				});
+				$('#show_but').click(function(){
+					$('#show_text').show();
+				});
+				$('#slid_but').click(function(){
+					$('#slid_img').slideDown();
+				});
+				$('#sliu_but').click(function(){
+					$('#sliu_img').slideUp();
+				});
+				$('#fadi_but').click(function(){
+					$('#fad_in').fadeIn();
+				});
+				$('#fado_but').click(function(){
+					$('#fad_out').fadeOut();
+				});
+				$('#prop_box').change(function(){
+					$('#prop_text').text('The box is checked: ' + $('#prop_box').prop("checked"));
+				});
+				$('#foc_box').focus(function(){
+					$('#foc_but').show();
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>jQuery Basic Assignment</h1>
+			<div id="add" class="cell r1 c1">
+				<h2>Add a class</h2>
+				<button id="add_but">Add Class</button>
+				<p id="addition">Click the button to add a class "red" to this paragraph.</p>
+			</div><!-- add -->
+			<div id="after" class="cell r1 c2">
+				<h2>After</h2>
+				<button id="aft_but">Add After</button>
+				<p class="ins_aft">Click the button to add a text after each paragraph.</p>
+				<p class="ins_aft">And here</p>
+				<p class="ins_aft">And finally here.</p>
+			</div><!-- after -->
+			<div id="slide" class="cell r4 c2">
+				<h2>Slide Toggle</h2>
+				<img id="sli_img" src="logo.jpg" alt="Logo" width="100" height="100">
+				<button id="sli_but">Slide Toggle</button>
+				<p id="slidetoggler">Click the button to slidetoggle a hidden image.</p>
+			</div><!-- slide -->
+			<div id="append" class="cell r1 c3">
+				<h2>Append</h2>
+				<button id="app_but">Append</button>
+				<p id="appender">Click the button to append a new paragraph.</p>
+			</div><!-- append -->
+			<div id="before" class="cell r2 c1">
+				<h2>Before</h2>
+				<button id="bef_but">Add Before</button>
+				<p class="ins_bef">Click the button to add  before each paragraph.</p>
+				<p class="ins_bef">And here</p>
+				<p class="ins_bef">And finally here.</p>
+			</div><!-- before -->
+			<div id="html" class="cell r2 c2">
+				<h2>HTML</h2>
+				<button id="html_but">Replace HTML</button>
+				<p id="html_rep">Click the button to replace this html tag.</p>
+			</div><!-- html -->
+			<div id="text_getter" class="cell r2 c3">
+				<h2>Text as a getter</h2>
+				<button id="text_get">Select text</button>
+				<p id="text_got"><i>Press the button</i> and <b>only</b> the text will be selected and inserted after.</p>
+			</div><!-- text_getter -->
+			<div id="text_selector" class="cell r2 c4">
+				<h2>Text as a selector</h2>
+				<button id="text_sel">Select text</button>
+				<p id="text_selection">Press the button and this text will be replaced.</p>
+			</div><!-- text_selector -->
+			<div id="val" class="cell r3 c1">
+				<h2>Val Function</h2>
+				<p>This function will find a value of an element</p>
+				<form>
+					<input type="text" value="Enter some text here" id="val_test">
+				</form>
+				<p id="val_ins"></p>
+			</div><!-- val -->
+			<div id="toggle" class="cell r3 c2">
+				<h2>Toggle</h2>
+				<img id="tog_img" src="logo.jpg" alt="Logo" width="100" height="100">
+				<button id="tog_but">Toggle</button>
+				<p id="toggler">Click the button to toggle a hidden image.</p>
+			</div><!-- toggle -->
+			<div id="hide" class="cell r3 c3">
+				<h2>Hide Function</h2>
+				<p id="hide_text">This text will be hidden when you press the button.</p>
+				<button id="hide_but">Hide the text</button>
+			</div><!-- hide -->
+			<div id="show" class="cell r3 c4">
+				<h2>Show Function</h2>
+				<p>Press the button to show some text.</p>
+				<p id="show_text">This text will be shown when you press the button.</p>
+				<button id="show_but">Show the text</button>
+			</div><!-- show -->
+			<div id="slide_down" class="cell r4 c1">
+				<h2>Slide Down</h2>
+				<img id="slid_img" src="logo.jpg" alt="Logo" width="100" height="100">
+				<button id="slid_but">Slide Down</button>
+				<p>Click the button to slide down a hidden image.</p>
+			</div><!-- slide_down -->
+			<div id="slide_up" class="cell r4 c3">
+				<h2>Slide Up</h2>
+				<img id="sliu_img" src="logo.jpg" alt="Logo" width="100" height="100">
+				<button id="sliu_but">Slide Up</button>
+				<p>Click the button to slide up a hidden image.</p>
+			</div><!-- slide_up -->
+			<div id="fade_in" class="cell r4 c4">
+				<h2>Fade In</h2>
+				<p id="fad_in">This text will fade in.</p>
+				<p>Click the button to fade in content.</p>
+				<button id="fadi_but">Fade in</button>
+			</div><!-- fade_in -->
+			<div id="fade_out" class="cell r5 c1">
+				<h2>Fade Out</h2>
+				<p id="fad_out">This text will fade out.</p>
+				<p>Click the button to fade out content.</p>
+				<button id="fado_but">Fade out</button>
+			</div><!-- fade_out -->
+			<div id="focus" class="cell r5 c2">
+				<h2>Focus Function</h2>
+				<p>The button will show when focus changes to input box.</p>
+				<form>
+					<input type="text" id="foc_box">
+					<button id="foc_but">Button Shows</button>
+				</form>
+			</div><!-- focus -->
+			<div id="props" class="cell r1 c4">
+				<h2>Prop Function</h2>
+				<p>This function will return the properties of an element.</p>
+				<form>
+					<label>Check this box value:<input type="checkbox" id="prop_box" checked="checked"></label>
+					<p id="prop_text"></p>
+				</form>
+			</div><!-- props -->
+		</div><!-- wrapper -->
+	</body>
+</html>
